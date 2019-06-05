@@ -238,30 +238,9 @@
                          
                             <!-- Comment Area Start -->
 							
-                            <div class="comment_area section_padding_50 clearfix">
-                                <h4 class="mb-30">Comentarios</h4>
+					
+							
 
-                                <ol>
-                                    <!-- Single Comment Area -->
-                                    <li class="single_comment_area">
-                                        <div class="comment-wrapper d-flex">
-                                            <!-- Comment Meta -->
-                                            <div class="comment-author">
-                                                <img src="img/blog-img/17.jpg" alt="">
-                                            </div>
-                                            <!-- Comment Content -->
-                                            <div class="comment-content">
-                                                <span class="comment-date text-muted">27 Aug 2018</span>
-                                                <h5>Brandon Kelley</h5>
-                                                <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora.</p>
-                                                <a href="#">Like</a>
-                                                <a class="active" href="#">Reply</a>
-                                            </div>
-                                        </div>
-                                        </ol>
-                                    </li>
-                                  
-                            </div>
 
                             <!-- Leave A Comment -->
                             <div class="leave-comment-area section_padding_50 clearfix">
@@ -607,45 +586,10 @@
     <!-- Active JS -->
     <script src="js/active.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+	    <script src="js/conect.js"></script>
 
-    <script>
+	
+
      
-      // Your web app's Firebase configuration
-var firebaseConfig = {
-    apiKey: "AIzaSyBjjzVhWqM7hYa4p81fIbEo4N1jWDK5Cmk",
-    authDomain: "pigfish-d3366.firebaseapp.com",
-    databaseURL: "https://pigfish-d3366.firebaseio.com",
-    projectId: "pigfish-d3366",
-    storageBucket: "pigfish-d3366.appspot.com",
-    messagingSenderId: "431641652125",
-    appId: "1:431641652125:web:465580c9de6fd7e0"
-  };
   
-  firebase.initializeApp(firebaseConfig);
-  var messagesRef = firebase.database().ref('messages');
-var boton = document.getElementById('btn1');
- boton.addEventListener("click",enviarDatos,false);
-
-
-function enviarDatos(){
-
-  var nombre = document.getElementById('nombre').value;
-  var email = document.getElementById('email').value;
-  var message = document.getElementById('message').value;
-  
-  guardarMensajeFirebase(nombre, email, message);
-}
-
-
-
-
-function guardarMensajeFirebase(nombre, email, message){
-  var newMessageRef = messagesRef.push();
-  newMessageRef.set({
-    nombre: nombre,
-    email:email,
-    message:message
-  });
-}
-    </script>
 </body>
