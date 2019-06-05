@@ -35,68 +35,56 @@ function guardarMensajeFirebase(nombre, email, message){
     email:email,
     message:message
   });
-     var db = firebase.database();
-var ref = db.ref("messages");
-     
-var table = document.getElementById("tabla");
     
-//limpia la tabla
-table.innerHTML = "";
- 
- //con esta función recorre todos los datos almacenados en FB ordenados por mi child(tipo)
-    
-ref.orderByChild("messages").on("child_added", function(snapshot){
-//repite el proceso como cuantas referencias encuentre y los asigna a la lista "d"
-     
-  var d = snapshot.val();        
-        
-  {
-  var pnombre = .insertRow(0);
-  var pmail = row.insertCell(0);
-  var pmessage = row.insertCell(1);
-  var cell3= row.insertCell(2);
-  
-  // asigna a las celdas el valir del Child especificado
-  cell1.innerHTML = d.nombre;
-  cell2.innerHTML = d.message;
-  cell3.innerHTML= d.email;
-  }
- console.log(d);
-        
-});
+  window.location.reload();
+
  
 }
 
 function busca_user() {    
-   var db = firebase.database();
-var ref = db.ref("messages");
-     
-var table = document.getElementById("tabla");
-    
-//limpia la tabla
-table.innerHTML = "";
- 
- //con esta función recorre todos los datos almacenados en FB ordenados por mi child(tipo)
-    
-ref.orderByChild("messages").on("child_added", function(snapshot){
-//repite el proceso como cuantas referencias encuentre y los asigna a la lista "d"
-     
-  var d = snapshot.val();        
-        
-  {
-  var row = table.insertRow(0);
-  var cell1 = row.insertCell(0);
-  var cell2 = row.insertCell(1);
-  var cell3= row.insertCell(2);
   
-  // asigna a las celdas el valir del Child especificado
-  cell1.innerHTML = d.nombre;
-  cell2.innerHTML = d.message;
-  cell3.innerHTML= d.email;
-  }
- console.log(d);
-        
-});
- 
 } 
-    
+ 
+$(document).ready(function(){
+   var dbaux = firebase.database().ref('messages');
+   dbaux.orderByChild("messages").on("child_added", function(snapshot){
+     var obj = snapshot.val();
+     var nombre = obj.nombre;
+     var mensaje = obj.message;
+     var correo = obj.email;
+
+     var div = document.createElement("div");
+     div.className = "comment-wrapper d-flex";
+
+
+     var div2 = document.createElement("div");
+     div2.className = "comment-author";
+
+     var img = document.createElement("img");
+     img.src = "img/blog-img/17.jpg";
+
+     div2.appendChild(img);
+
+     var div3 = document.createElement("div");
+     div3.className = "comment-content";
+
+
+     var h5 = document.createElement("h5");
+     h5.textContent = nombre;
+
+     var p = document.createElement("p");
+     p.textContent = mensaje;
+
+     div3.appendChild(h5);
+     div3.appendChild(p);
+
+     div.appendChild(div2);
+     div.appendChild(div3);
+
+     var divcomentarios = document.getElementById("seccioncomentarios");
+     divcomentarios.appendChild(div);
+
+   });
+});
+
+
