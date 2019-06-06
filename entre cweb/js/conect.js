@@ -12,16 +12,16 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   var messagesRef = firebase.database().ref('messages');
 var boton = document.getElementById('btn1');
- boton.addEventListener("click",enviarDatos,false);
+
+
+
+
  
-
-
 function enviarDatos(){
 
   var nombre = document.getElementById('nombre').value;
   var email = document.getElementById('email').value;
   var message = document.getElementById('message').value;
-  
   guardarMensajeFirebase(nombre, email, message);
 }
 
@@ -87,4 +87,9 @@ $(document).ready(function(){
    });
 });
 
+
+var guardar = function(){
+  enviarDatos();
+    return false;
+}
 

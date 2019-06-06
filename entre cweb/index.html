@@ -48,9 +48,9 @@
                 <!--  Login Register Area -->
                 <div class="col-7 col-sm-6">
                     <div class="signup-search-area d-flex align-items-center justify-content-end">
-                      
+
                         <!-- Search Button Area -->
-                      
+
                         <!-- Search Form -->
                         <div class="search-hidden-form">
                             <form action="#" method="get">
@@ -94,10 +94,11 @@
                                         <a class="dropdown-item" href="index.html">INICIO</a>
                                         <a class="dropdown-item" href="blog.html">BLOG</a>
                                         <a class="dropdown-item" href="contact.html">CONTACTO</a>
+
                                     </div>
                                 </li>
-                               
-                               
+
+
                                 <li class="nav-item">
                                     <a class="nav-link animated bounceInLeft" href="blog.html">BLOG</a>
                                 </li>
@@ -179,7 +180,7 @@
     </section>
     <!-- ****** Welcome Area End ****** -->
          <div class="dieta-logo-area text-center">
-                            <a href="index.html" class="yummy-logo">A romper la dieta:</a>
+                            <a href="index.html" class="yummy-logo">A romper la dieta</a>
                         </div>
     <!-- ****** Categories Area Start ****** -->
     <section class="categories_area clearfix" id="about">
@@ -237,9 +238,9 @@
                                 <!-- Post Content -->
                                 <div class="post-content">
                                     <div class="post-meta d-flex">
-                                     
+
                                         <!-- Post Comment & Share Area -->
-                                       
+
                                     </div>
                                     <a href="#">
                                         <h2 class="post-headline">El taco, bendita joya alimentaria, eres la comida terrenal más rápida y genial.</h2>
@@ -305,12 +306,12 @@
                                     <div class="post-meta d-flex">
                                         <div class="post-author-date-area d-flex">
                                             <!-- Post Author -->
-                                           
+
                                         </div>
                                         <!-- Post Comment & Share Area -->
                                         <div class="post-comment-share-area d-flex">
                                             <!-- Post Favourite -->
-                                          
+
                                         </div>
                                     </div>
                                     <a href="#">
@@ -320,7 +321,7 @@
                             </div>
                         </div>
 
-                     
+
 
 
                     </div>
@@ -373,7 +374,7 @@
                             <div class="single-populer-post d-flex">
                                 <img src="img/sidebar-img/2.jpg" alt="">
                                 <div class="post-content">
-                                        <h6>PROMOCIÓN TAQUERA 
+                                        <h6>PROMOCIÓN TAQUERA
 										</h6>
                                     </a>
                                 </div>
@@ -382,17 +383,17 @@
                             <div class="single-populer-post d-flex ">
                                 <img src="img/sidebar-img/3.jpg" alt="">
                                 <div class="post-content">
-                                        <h6>PROMOCIÓN TAQUERA</h6> 
+                                        <h6>PROMOCIÓN TAQUERA</h6>
                                     </a>
                                 </div>
                             </div>
-                           
-                           
+
+
                         </div>
 
                         <!-- Single Widget Area -->
                         <div >
-                          
+
                         </div>
 
                         <!-- Single Widget Area -->
@@ -402,9 +403,9 @@
                             </div>
                             <p>Suscribite, si deseas obtener de manera inmediata las promociones y novedades de PIG & FISH </p>
                             <div class="newsletter-form">
-                                <form action="#" method="post">
-                                    <input type="email" name="newsletter-email" id="email" placeholder="EMAIL">
-                                    <button type="submit"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                                <form id="contact" onsubmit=" return guardarboletin()">
+                                    <input type="email" name="newsletter-email" id="boletin" placeholder="EMAIL" required>
+                                    <button type="submit" id="btn2"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
                                 </form>
                             </div>
                         </div>
@@ -641,7 +642,8 @@
     <script src="js/others/plugins.js"></script>
     <!-- Active JS -->
     <script src="js/active.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script src="js/newstler.js"></script>
 
     <script> src="js/main.js"</script>
 </body>
